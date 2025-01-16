@@ -1,22 +1,34 @@
-import fastify from 'fastify';
+import Fastify from 'fastify';
 import cors from '@fastify/cors';
+import jwt from '@fastify/jwt';
+import dotenv from 'dotenv';
+import userRoutes from './routes/userRoutes.js';
 
-const app = fastify();
-app.register(cors);
+dotenv.config();
 
-app.get('/', async (request, reply) => {
-    reply.send({message: 'Payment Manager Backend is running!'});
+const fastify = Fastify({ logger: true});
+
+fastify.register(cors, {
+    origin: '*',
 });
 
-const start = async () => {
+fastify.register(jwt, {
+    secret: process.env.JWT_SECRET || 'your-secret-key',
+});
+
+fastify.register(userRoutes, {prefix: '/api/users'});
+
+const startServer = async () => {
     try {
-        await app.listen({ port: 5000});
-        console.log('Server is running at http://localhost:5000');
+        const port = parseInt(process.env.PORT || '3000', 10);
+        const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost';
+        await fastify.listen({port, host});
+        console.log(`Server is running on http://${host}:${port}`);
     }
-    catch (err) {
-        app.log.error(err);
+    catch(err) {
+        fastify.log.error(err);
         process.exit(1);
     }
 };
 
-start();
+startServer();
