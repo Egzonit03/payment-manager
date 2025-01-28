@@ -1,0 +1,12 @@
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25% auto;
+    background-color: #b4c0b1;
+    width: fit-content;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}

@@ -1,0 +1,77 @@
+.menu-container {
+  transition: margin-left 0.3s ease;
+}
+
+.menu-container.sidebar-open {
+  margin-left: 300px;
+}
+
+.sidebar-drawer .MuiDrawer-paper {
+  width: 300px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  background-color: #3a5a40;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.sidebar-close-btn.MuiIconButton-root {
+  color: white;
+  transition: transform 0.3s;
+}
+
+.sidebar-close-btn.MuiIconButton-root:hover {
+  transform: rotate(90deg);
+}
+
+.sidebar-divider.MuiDivider-root {
+  margin: 10px 0;
+  background-color: #ced4da;
+}
+
+.sidebar-list {
+  flex-grow: 1;
+}
+
+.sidebar-list-item.MuiListItemButton-root {
+  margin: 5px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar-list-item.MuiListItemButton-root:hover {
+  background-color: #e9ecef;
+  transform: scale(1.05);
+}
+
+.sidebar-icon.MuiListItemIcon-root {
+  color: white;
+  min-width: 40px;
+}
+
+.sidebar-text.MuiListItemText-root {
+  font-size: 1rem;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}

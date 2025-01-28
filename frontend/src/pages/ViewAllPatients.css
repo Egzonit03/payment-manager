@@ -1,0 +1,9 @@
+.all-patients-container {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+    background-color: #b4c0b1;
+}
+
+.all-patients-container.sidebar-open {
+    margin-left: 300px;
+}

@@ -84,7 +84,7 @@ function Login() {
             const response = await axios.post('http://127.0.0.1:3000/api/users/login', loginData);
             console.log('Response: ', response.data);
             setSuccess('Login successful!');
-            navigate('/home');
+            navigate('/menu');
             if(response.data?.token) {
                 sessionStorage.setItem('token', response.data.token);
             }
@@ -101,7 +101,7 @@ function Login() {
         <div>
             <div style={{marginTop:'5px'}}>
                 <TextField
-                label = 'E-mail Address'
+                label = 'E-mail'
                 fullWidth
                 error = {emailError}
                 variant = 'standard'
@@ -155,6 +155,7 @@ function Login() {
                 fullWidth
                 startIcon = {<LoginIcon />}
                 onClick = {handleSubmit}
+                sx={{backgroundColor:'#452103'}}
                 >
                     LOGIN
                 </Button>
@@ -179,10 +180,10 @@ function Login() {
             )}
 
             <div style={{marginTop:'7px', fontSize:'10px', margin:'left'}}>
-                <a href='#'>Forgot Password</a>
+                <a href='#' style={{color:'whitesmoke'}}>Forgot Password</a>
                 <br />
                 Do not have an account?! Click{' '}
-                <Link to='/'><small style={{textDecoration:'underline', color:'blue'}}>Sign Up</small></Link>
+                <Link to='/'><small style={{textDecoration:'underline', color:'whitesmoke'}}>Sign Up</small></Link>
             </div>
         </div>
         </>

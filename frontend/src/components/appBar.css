@@ -1,0 +1,50 @@
+  .app-bar-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-icon-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon-button {
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-icon-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .app-title {
+    font-weight: bold;
+    margin-left: 16px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .app-title:hover {
+    transform: scale(1.1);
+    color: #212529;
+  }
+  
+  .right-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .action-icon:hover {
+    transform: scale(1.2);
+    color: #212529;
+  }
+  
+  .sign-out-button:hover {
+    background-color: #212529;
+    color: inherit;
+    transform: scale(1.2);
+  }
+  

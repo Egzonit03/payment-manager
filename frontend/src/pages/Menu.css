@@ -1,0 +1,137 @@
+.menu-container {
+  margin-left: 0;
+  transition: margin-left 0.3s ease-in-out;
+  background-color: #b0c4b1;
+}
+
+.menu-container.sidebar-open {
+  margin-left: 300px;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #3a5a40, #dcedc8);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: fit-content;
+  margin: 50px auto;
+}
+
+/* Action Cards Section */
+.action-cards-container {
+  margin-top: 50px;
+}
+
+.action-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-action-card.MuiBox-root {
+  background: linear-gradient(to right, #f2f2f2, #dcdcdc, #c4c4c4);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  max-width: 280px;
+  flex: 1 1 calc(33.333% - 20px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-action-icon.MuiIconButton-root {
+  color: #3f51b5;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu-action-icon:hover {
+  color: #283593;
+  transform: scale(1.2);
+}
+
+.menu-action-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.menu-action-description {
+  font-size: 0.9rem;
+  color: #757575;
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  font-size: 0.875rem;
+  color: #757575;
+}
+
+.statistics-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #3a5a40, #dcedc8);
+  color: #fff;
+  width: fit-content;
+  margin: 50px auto;
+}
+
+.statistics-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stat-card {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card-content {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #f2f2f2, #dcdcdc, #c4c4c4);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #000
+}

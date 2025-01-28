@@ -28,11 +28,11 @@ function Register() {
     return(
         <div className='register-container'>
             <div className='registration'>
-                <Paper elevation={3} style={{padding:'10px'}}>
+                <Paper elevation={3} style={{padding:'10px', backgroundColor:'#1111', border:'1px solid gray'}}>
                     {checked ? (
-                        <Chip icon={<FaceIcon/>} label='Sign Up' color='primary' variant='outlined' />
+                        <Chip icon={<FaceIcon/>} label='Sign Up' variant='filled' sx={{backgroundColor:'#1111'}} />
                     ) : (
-                        <Chip icon={<LockIcon/>} label='Login' color='primary' variant='outlined' />
+                        <Chip icon={<LockIcon/>} label='Login' variant='filled' sx={{backgroundColor:'#1111'}} />
                     )}
                     <br/>
                     <Switch checked={checked} onChange={handleChange} inputProps={{'aria-label' : 'controlled'}}/>
@@ -40,8 +40,8 @@ function Register() {
                     {checked ? <SignUp/> : <Login/>}
                 </Paper>
             </div>
-            <Button variant='contained' color='primary' startIcon={<PublicIcon/>} sx={{marginTop:'25px', width:'350px'}}
-            onClick={() => navigate('/home')}>Try EGZO as a Guest</Button>
+            <Button variant='contained' startIcon={<PublicIcon/>} sx={{marginTop:'25px', width:'350px', backgroundColor:'#452103'}}
+            onClick={() => navigate('/menu')}>Try EGZO as a Guest</Button>
         </div>
     )
 }

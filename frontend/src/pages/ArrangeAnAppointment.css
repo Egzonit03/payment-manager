@@ -1,0 +1,9 @@
+.arrange-appointment-container {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+    background-color: #b0c4b1;
+}
+
+.arrange-appointment-container.sidebar-open {
+    margin-left: 300px;
+}
