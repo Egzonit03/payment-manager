@@ -209,7 +209,14 @@ function SignUp() {
                 </FormControl>
             </div>
             <div style={{marginTop:'10px'}}>
-                <Button onClick={handleSubmit} fullWidth variant='contained' sx={{backgroundColor:'#452103'}} startIcon={<LoginIcon />}>SIGN UP</Button>
+                <Button onClick={handleSubmit} fullWidth variant='contained' startIcon={<LoginIcon />} sx={{
+                    background: 'linear-gradient(135deg, #064e3b, #0f766e, #344e41)',
+                    border: '1px solid gray',
+                    transition: 'transform 0.3s ease',
+                    '&:hover' : {
+                        transform: 'scale(1.05)'
+                    }
+                }}>SIGN UP</Button>
             </div>
 
             {/*Show Form Error if there is any */}
@@ -233,8 +240,8 @@ function SignUp() {
             <div style={{marginTop:'7px', fontSize:'10px', margin:'left'}}>
                 <a href='#' style={{color:'white'}}>Forgot Password</a>
                 <br/>
-                Do you have an account already ? {' '}
-                <Link to='/'><small style={{textDecoration: 'underline', color: 'whitesmoke'}}>Login</small></Link>
+                <span style={{color:'black', textShadow:'2px 4px 10px white'}}>Do you have an account already ? {' '}</span>
+                <Link to=''><small style={{textDecoration: 'underline', color: 'whitesmoke'}}>Login</small></Link>
             </div>
         </div>
         </>

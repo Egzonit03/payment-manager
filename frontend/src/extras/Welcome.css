@@ -3,10 +3,131 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 25% auto;
-    background-color: #b4c0b1;
-    width: fit-content;
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 10px;
+    height: 100vh;
+    background: linear-gradient(135deg, #073b4c, #118ab2, #06d6a0);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    gap: 10px;
+    animation: fadeIn 1.5s ease-in-out;
 }
+
+.logo-container {
+    animation: bounce 2s infinite;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    opacity: 0;
+    animation: fadeInLogo 1.5s ease-in-out forwards;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 20px #06d6a0);
+}
+
+.welcome-title {
+    color: #f8f9fa;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    animation: slideIn 1.8s ease-out forwards 0.5s;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.welcome-title:hover {
+    color: #118ab2;
+    transform: scale(1.05);
+}
+
+.highlight {
+    background: linear-gradient(45deg, #118ab2, #073b4c, #1b262c, #3282b8);
+    text-shadow: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin-top: 25px;
+}
+
+.welcome-description-text {
+    color: #e0e0e0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    opacity: 1;
+    animation: fadeInText 2s ease-in-out forwards 1s;
+    line-height: 1.5;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.welcome-description-text:hover {
+    color: #06d6a0;
+    transform: translateX(5px);
+}
+
+.welcome-button.MuiButton-root {
+    margin-top: 25px;
+    padding: 15px 100px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #0f4c75, #2bbbad);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    animation: fadeInButton 2.2s ease-in-out forwards 1.5s;
+}
+
+.welcome-button.MuiButton-root:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #2bbbad, #0f4c75);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInLogo {
+    0% { opacity: 0; transform: scale(0.5) rotate(-20deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInButton {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

@@ -10,8 +10,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('../assets/registration-images/background1.jpg');
+    background-image: url('../assets/registration-images/background3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.switch-button.MuiSwitch-root {
+    color: red;
 }

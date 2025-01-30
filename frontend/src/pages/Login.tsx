@@ -155,7 +155,14 @@ function Login() {
                 fullWidth
                 startIcon = {<LoginIcon />}
                 onClick = {handleSubmit}
-                sx={{backgroundColor:'#452103'}}
+                sx={{
+                    background: 'linear-gradient(135deg, #064e3b, #0f766e, #344e41)',
+                    border: '1px solid gray',
+                    transition: 'transform 0.3s ease',
+                    '&:hover' : {
+                        transform: 'scale(1.05)'
+                    }
+                }}
                 >
                     LOGIN
                 </Button>
@@ -182,8 +189,8 @@ function Login() {
             <div style={{marginTop:'7px', fontSize:'10px', margin:'left'}}>
                 <a href='#' style={{color:'whitesmoke'}}>Forgot Password</a>
                 <br />
-                Do not have an account?! Click{' '}
-                <Link to='/'><small style={{textDecoration:'underline', color:'whitesmoke'}}>Sign Up</small></Link>
+                <span style={{color:'black', textShadow:'2px 4px 10px white'}}>Do not have an account?! Click{' '}</span>
+                <Link to=''><small style={{textDecoration:'underline', color:'whitesmoke'}}>Sign Up</small></Link>
             </div>
         </div>
         </>

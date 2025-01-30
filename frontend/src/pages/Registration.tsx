@@ -35,12 +35,27 @@ function Register() {
                         <Chip icon={<LockIcon/>} label='Login' variant='filled' sx={{backgroundColor:'#1111'}} />
                     )}
                     <br/>
-                    <Switch checked={checked} onChange={handleChange} inputProps={{'aria-label' : 'controlled'}}/>
+                    <Switch checked={checked} onChange={handleChange} inputProps={{'aria-label' : 'controlled'}} className='switch-button'
+                    sx={{
+                        '& .MuiSwitch-thumb': {
+                          backgroundColor: '#0f766e'
+                        }
+                      }}
+                    />
                     <br/>
                     {checked ? <SignUp/> : <Login/>}
                 </Paper>
             </div>
-            <Button variant='contained' startIcon={<PublicIcon/>} sx={{marginTop:'25px', width:'350px', backgroundColor:'#452103'}}
+            <Button variant='contained' startIcon={<PublicIcon/>} 
+            sx={{marginTop:'25px', width:'350px', 
+                background: 'linear-gradient(135deg, #064e3b, #0f766e, #344e41)',
+                transition: ' transform 0.3s ease',
+                border: '1px solid gray',
+                '&:hover': {
+                    boxShadow: '2px 4px 10px gray',
+                    transform: 'scale(1.05)'
+                }
+            }}
             onClick={() => navigate('/menu')}>Try EGZO as a Guest</Button>
         </div>
     )
