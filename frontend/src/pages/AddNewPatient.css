@@ -1,9 +1,87 @@
 .add-patient-container {
     margin-left: 0;
     transition: margin-left 0.3s ease-in-out;
-    background-color: #b0c4b1;
+    background: linear-gradient(135deg, #4e8b7d, #81c784, #00796b);
 }
 
 .add-patient-container.sidebar-open {
     margin-left: 300px;
+}
+
+.add-patient-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #344e41, #3a5a40, #588157);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.patient-form-card.MuiCard-root {
+    width: 100%;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+}
+
+.form-title.MuiTypography-root {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group > * {
+    flex: 1;
+}
+
+.input-group.MuiTextField-root {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.input-group.MuiTextField-root input {
+    color: white !important;
+}
+
+.input-group.MuiTextField-root label {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.register-btn.MuiButton-root {
+    background: linear-gradient(135deg, #38a169, #2e7d32);
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.register-btn.MuiButton-root:hover {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    transform: scale(1.05);
+}
+
+.form-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }

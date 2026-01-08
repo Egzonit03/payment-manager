@@ -1,9 +1,91 @@
 .all-patients-container {
     margin-left: 0;
     transition: margin-left 0.3s ease-in-out;
-    background-color: #b4c0b1;
+    background: linear-gradient(135deg, #4e8b7d, #81c784, #00796b);
+    min-height: 100vh;
 }
 
 .all-patients-container.sidebar-open {
     margin-left: 300px;
+}
+
+.patients-table-container {
+    margin-top: 50px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #aed581);
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.patient-table-header {
+    text-align: center;
+    font-weight: bold;
+    color: #1b5e20;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.patients-table-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.patient-table-search-bar {
+    flex: 1;
+}
+
+.patient-table-search-bar.MuiTextField-root input {
+    color: black !important;
+}
+
+.add-btn.MuiButton-root {
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-btn.MuiButton-root:hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.patient-table-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.patient-table-header {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    color: white;
+    font-weight: bold;
+}
+
+.patient-table-header th {
+    color: white !important;
+    font-size: 16px;
+}
+
+.patient-table-row:hover {
+    background: linear-gradient(135deg, #c8e6c9, #81c784);
+    transition: background 0.3s ease;
+}
+
+.payment-cell.MuiTableCell-root {
+    font-weight: bold;
+    color: #c62828;
+}
+
+.no-results.MuiTableCell-root {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c62828;
 }

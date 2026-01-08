@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { AppBar, Toolbar, IconButton, Typography, Box, Tooltip, Button } from "@mui/material";
 import { Menu as MenuIcon, Notifications, AccountCircle } from "@mui/icons-material";
+import ReplyIcon from '@mui/icons-material/Reply';
 import './appBar.css'; 
 
 const AppBarComponent = ({ setSidebarOpen }: { setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
@@ -38,6 +39,11 @@ const AppBarComponent = ({ setSidebarOpen }: { setSidebarOpen: React.Dispatch<Re
           <Tooltip title="Account">
             <IconButton className="action-icon" color="inherit" sx={{transition: 'transform 0.3s ease, color 0.3s ease'}}>
               <AccountCircle fontSize="large" />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Return">
+            <IconButton className="action-icon" color="inherit" sx={{transition: 'transform 0.3s ease, color 0.3s ease'}} onClick={() => navigate('/menu')}>
+              <ReplyIcon fontSize="large" />
             </IconButton>
           </Tooltip>
           <Tooltip title='Sign-Out'>

@@ -26,7 +26,7 @@ function FooterComponent() {
                 </Typography>
                 <Typography variant='body1' className='footer-text'>
                     <AdsClickIcon fontSize='small' className='footer-icon' />
-                    Click on the title of the app to return back to the Menu page.
+                    Click on the title of the app or on the 'return' button to go back to the Menu page.
                 </Typography>
             </Box>
 
